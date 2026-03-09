@@ -3,3 +3,500 @@ croissant, French pastry that is typically crescent-shaped, which is the origin 
 Although there are earlier culinary references to “croissants,” the first recipe for the croissant as it is known today emerged as only recently as 1906. The huge growth in popularity of the croissant appears to have been a 20th-century sensation.
 
 The classic crescent-shaped French pastry is made from a yeast-based dough, which is rolled and layered to incorporate butter. Because of the cost of butter, many bakers use cheaper substitutes such as margarine, which means that most bakeries in France offer two types of croissants: croissant and croissant au beurre (“croissant with butter”). The former tends to be more breadlike, whereas the latter is much richer and, predictably, more buttery. A popular habit among bakers is to bend the butterless croissant into a distinctive curve while straightening out the croissant au beurre so as to distinguish clearly between the two.
+
+
+
+
+prac 1 
+
+git --version 
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+git config --list
+cd "Desktop/GitProject"
+git init
+git status 
+git add butter.txt
+git status
+git add .
+git commit -m "Initial commit"
+git log
+git log --oneline
+git log --stat
+.gitignore (*.txt)
+ after editing the file 
+git status
+git add filename
+git commit -m "Updated file"
+git commit --amend
+git restore --staged filename
+git restore filename
+git clone https://github.com/user/repo.git 	
+git log --since=2.weeks
+git log -n 1
+git log -1
+git log --after="today 10 pm"
+git log --before="2026-01-15 18:53:53"
+git remote
+git remote -v
+git remote add origin https://github.com/user/repo.git
+git fetch origin
+git pull origin master
+git push origin master
+git tag
+git tag -a v1.0 -m "version 1.0"
+git push origin v1.0
+git branch 
+
+
+
+prac 2
+
+cd "D:\Ananya\prac1\GitClone"
+
+git clone https://github.com/schacon/ticgit
+
+ cd ticgit
+
+git remote 
+git remote -v
+git remote add pb https://github.com/schacon/ticgit
+git remote -v
+git push origin master
+git fetch pb
+git remote show origin 
+git remote 
+git remote rename pb paul
+git remote 
+git remote rm paul
+git remote 
+git tag
+git tag -a v0.0 -m 'myversion 0.0'
+git tag 
+git log --oneline
+git tag -a v0.9 4f7043d -m "Tagging older version"
+
+git config --global alias.ci commit
+
+
+prac 3
+
+git branch 
+git branch test
+git checkout test
+git checkout -b login
+git checkout master 
+git branch -d login 
+git merge login 
+
+
+git checkout -b login 
+echo "login page" > login.txt 
+git add login.txt
+git commit -m "added login page"
+git checkout master 
+git merge login 
+git branch -d login 
+
+
+git branch --merged 
+git branch --no-merged 
+git branch -v
+git merge test 
+
+prac 4 
+
+create a project in GitHub then go to git bash 
+type cd "folder path "
+git init
+git add. 
+if the folder already exist then u should type 
+git rm --cached GitClone/ticgit then git add .
+git commit -m "initial commit"
+
+
+git remote add origin https://github.com/Ananyall/prac1.git
+git push -u origin main/master 
+git pull origin main/master 
+
+
+prac 5
+Create Branch on GitHub
+
+Open GitHub
+👉 https://github.com
+
+Open your repository.
+
+On top left you will see branch dropdown (main).
+
+Click it.
+
+Type new branch name:
+
+feature-branch
+
+Click Create branch: feature-branch
+
+Now the new branch is created. 
+
+GitHub Practicals
+
+Part B — Modify File in Feature Branch
+
+Make sure feature-branch is selected.
+
+Open any file (example: README.md or index.html).
+
+Click Edit (pencil icon).
+
+Add this line:
+
+This change is from feature branch.
+
+Scroll down.
+
+Add commit message:
+
+Updated file in feature branch
+
+Click Commit changes.
+
+✔ Now changes are saved in feature branch. 
+
+GitHub Practicals
+
+Part C — Modify Same File in Main Branch
+
+Switch branch to main.
+
+Open same file again.
+
+Click Edit.
+
+Add this line:
+
+This change is from main branch.
+
+Scroll down.
+
+Add commit message:
+
+Updated file in main branch
+
+Click Commit changes.
+
+✔ Now both branches have different changes. 
+
+GitHub Practicals
+
+Part D — Merge Branch and Create Conflict
+
+Click Pull Requests tab.
+
+Click New Pull Request.
+
+Select:
+
+Base branch → main
+Compare branch → feature-branch
+
+Click Create Pull Request.
+
+Now GitHub will show merge conflict warning because both branches edited the same file. 
+
+GitHub Practicals
+
+Part E — Resolve Conflict
+
+Click Resolve Conflicts.
+
+You will see code like this:
+
+<<<<<<< main
+This change is from main branch
+=======
+This change is from feature branch
+>>>>>>> feature-branch
+
+Edit the file and keep the content you want.
+
+Example:
+
+This change is from main branch
+This change is from feature branch
+
+Delete the conflict markers
+
+<<<<<<<
+=======
+>>>>>>>
+
+Click Mark as resolved.
+
+Click Commit merge.
+
+✔ Branch merged successfully
+prac 6 
+open friends repo 
+click fork 
+git clone https://github.com/Ananyall/Demo-Project.git
+cd Demo-Project
+git checkout -b collaborations-branch 
+modify the file and save changes 
+git add. 
+git commit -m "Added collaboration change"
+git push origin collaboration-branch 
+
+
+prac 7 
+
+
+prac 8 
+
+mvn archetype:generate
+
+maven-archetype-quickstart
+then enter 
+then type GroupId: com.college
+ii. ArtifactId: MavenDemo
+iii. Version: 1.0-SNAPSHOT
+iv. Package: com.college
+
+Y
+cd MavenDemo 
+mvn compile 
+mvn test
+mvn package
+Check: target folder
+
+
+You will see: MavenDemo-1.0-SNAPSHOT.jar
+
+java -cp target\MavenDemo-1.0-SNAPSHOT.jar com.college.App
+
+prac 9 
+
+mvn archetype:generate
+maven-archetype-webapp
+9
+org.mywebapp.com
+MyWebApp
+enter enter 
+Y 
+
+
+cd MyWebApp 
+
+mvn compile
+mvn package
+
+Open \apache-tomcat-9.0.106\bin\ and open startup.bat file then open browser and type
+localhost:8080
+
+
+Click on Manage App
+
+It will ask you to enter username and password, to check the same go to \apache-tomcat-
+9.0.106\conf\ and open tomcat-users.xml file with notepad check the username and set the
+
+password for the same also add user role and remove the comment tag
+
+
+<role rolename="manager-gui"/>
+<user username="admin" password="12345" roles="manager-gui"/>
+
+
+Now stop and then restart tomcat server go to browser and refresh localhost:8080 and click
+on Manage App
+Enter username and password it will open
+
+Go to \myapp\MyWebApp\target\ and select .war file and click on deploy button
+After this you can find your .war file in the above list
+
+prac 10 
+
+go to mywebapp 
+then pom.xml 
+change it to 
+
+
+add this line 
+(((
+<artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.6.1</version>
+        </plugin>
+)))
+<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.0.2</version>
+            <configuration>
+                <source>1.5</source>
+                <target>1.5</target>
+            </configuration>
+        </plugin>
+paste it 
+
+make a java file 
+
+package org.mywebapp.com;
+
+import java.util.*;
+
+public class MyClass
+{
+    public static void main(String[] args)
+    {
+        List<String> stringList = new ArrayList<String>();
+    }
+}
+
+if error comes convert the above cmd to 1.5 
+
+
+then add this 
+<plugin>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.4.53.v20231009</version>
+        </plugin>
+<plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+        </plugin>
+mvn jetty:run
+
+mvn tomcat7:run
+
+
+prac 11
+CalculatorServlet servlet file 
+package CalculatorServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CalculatorServlet extends HttpServlet {
+
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        double n1 = Double.parseDouble(request.getParameter("txtN1"));
+        double n2 = Double.parseDouble(request.getParameter("txtN2"));
+        String opr = request.getParameter("opr");
+
+        double result = 0;
+
+        if (opr.equals("+"))
+            result = n1 + n2;
+
+        if (opr.equals("-"))
+            result = n1 - n2;
+
+        if (opr.equals("*"))
+            result = n1 * n2;
+
+        if (opr.equals("/"))
+            result = n1 / n2;
+
+        out.println("<html><body>");
+        out.println("<h2>Calculator Result</h2>");
+        out.println("<h3>Result = " + result + "</h3>");
+        out.println("<a href='index.jsp'>Back</a>");
+        out.println("</body></html>");
+    }
+}
+
+
+index.jsp
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator App</title>
+</head>
+<body>
+
+<h2>Simple Calculator</h2>
+
+<form action="CalculatorServlet" method="get">
+    Enter First Number: 
+    <input type="text" name="txtN1"><br><br>
+
+    Enter Second Number: 
+    <input type="text" name="txtN2"><br><br>
+
+    Select an Operation:<br>
+    <input type="radio" name="opr" value="+"> ADDITION<br>
+    <input type="radio" name="opr" value="-"> SUBTRACTION<br>
+    <input type="radio" name="opr" value="*"> MULTIPLY<br>
+    <input type="radio" name="opr" value="/"> DIVIDE<br><br>
+
+    <input type="reset">
+    <input type="submit" value="Calculate">
+
+</form>
+
+</body>
+</html>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.mywebapp.com</groupId>
+  <artifactId>MyWebApp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>MyWebApp</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+    	<groupId>org.apache.tomcat.maven</groupId>
+    	<artifactId>tomcat7-maven-plugin</artifactId>
+    	<version>2.2</version>
+	  </plugin>
+    </plugins>
+  </build>
+</project>
+
+give project name as MyWebApp
