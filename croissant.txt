@@ -279,7 +279,7 @@ java -cp target\MavenDemo-1.0-SNAPSHOT.jar com.college.App
 prac 9 
 
 mvn archetype:generate
-maven-archetype-webapp
+maven-archetype-webapp / 3
 9
 org.mywebapp.com
 MyWebApp
@@ -500,3 +500,4 @@ index.jsp
 </project>
 
 give project name as MyWebApp
+
